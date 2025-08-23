@@ -1,0 +1,69 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "calculate",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"StateVariable.sol": "LocalVariable"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"StateVariable.sol": {
+			"keccak256": "0xc5b57ecc4c5eedbdbe37892f247aac5497bf3efca770267c0b6f554255a4b2c9",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://d4ed51077b3d3ac08bcaaf35aee8b52334ce8157bb7c200a6f0adc402f1c683d",
+				"dweb:/ipfs/QmQAc6o5eabeV7yq8yE8xvi1bKLK9GkmHbpzYX5UsD8K5b"
+			]
+		}
+	},
+	"version": 1
+}
