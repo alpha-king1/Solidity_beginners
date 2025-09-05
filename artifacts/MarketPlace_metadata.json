@@ -1,0 +1,171 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "productId",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "productName",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "productPrice",
+						"type": "uint256"
+					}
+				],
+				"name": "productDetail",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "totalPrice",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "productName",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "amountPurchased",
+						"type": "uint256"
+					}
+				],
+				"name": "puchasedDetails",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_productId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_purchaseQuantity",
+						"type": "uint256"
+					}
+				],
+				"name": "buyProduct",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_productname",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_productQuantity",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_productPrice",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bool",
+						"name": "_buyOnce",
+						"type": "bool"
+					}
+				],
+				"name": "createProduct",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "inabilityToBuy",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"DecentralizedMarketPlace.sol": "MarketPlace"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"DecentralizedMarketPlace.sol": {
+			"keccak256": "0x8857adb378e5761d0d7c10ebc5fd5c7b545d7b448a03cbec45de83c60488b6f9",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://9d68b4ab31f355d24dcef6dc79026e50b40b681d75ae626237dc5ffa6f9ac02e",
+				"dweb:/ipfs/QmRHPm6qdwosTBJmph88rRSDMii5PPU7BPaLU9CqVXRg7C"
+			]
+		}
+	},
+	"version": 1
+}

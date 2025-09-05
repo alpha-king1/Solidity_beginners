@@ -1,6 +1,4 @@
-// SPDX-License-Identifier: MIT
-
-pragma solidity ^0.8.30;
+// pragma solidity ^0.8.30;
 
 // contract MyFirstContract
 // {
@@ -42,29 +40,19 @@ pragma solidity ^0.8.30;
 //     }
 // }
 
-contract PersonalContract
-{
-    uint  hey;
-    string userName;
-    function addName(string memory _userName) public 
-    {
-        userName = _userName;
+// SPDX-License-Identifier: MIT
+
+// Make sure the compiler version is below 0.8.24 since Cancun compiler is not supported just yet
+pragma solidity >=0.8.0 <=0.8.24;
+
+contract Gmonad { 
+    string public greeting;
+
+    constructor(string memory _greeting) {
+        greeting = _greeting;
     }
 
-    function getInfo() public view returns (uint)
-    {
-        return hey;
-    }
-
-    function updateData(uint _hey) public 
-    {
-        hey = _hey;
-    }
-
-    function get(uint _a, uint _b) public pure returns (uint)
-    {
-        uint newNumbe = _a + _b;
-        return newNumbe;
+    function setGreeting(string calldata _greeting) external {
+        greeting = _greeting;
     }
 }
-

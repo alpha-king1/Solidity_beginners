@@ -1,0 +1,45 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"Erc20.sol": "MyToken"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"Erc20.sol": {
+			"keccak256": "0x8102c3ab403be6bb1cba4df2ae24f82be0715e9c367ff7b18a94b150753b5d29",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://651836ea7606cbc1fc84fbd9895bb4791ffcabb2df1b428b5db56a0bfbb15bd0",
+				"dweb:/ipfs/QmZwDZTZ1as6i9b6x6vhtPYavwofohFMN2WweactdATeNX"
+			]
+		}
+	},
+	"version": 1
+}

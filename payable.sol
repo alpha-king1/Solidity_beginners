@@ -60,10 +60,11 @@ contract sendeth
         require(send, 'not sent');
     }
 
-    function sendViaCall(address payable _addy) public payable
+    function sendViaCall(address payable _addy) public payable returns (bytes memory)
     {
         //recomended
         (bool sent, bytes memory data) = _addy.call{value: msg.value}('paid');
         require(sent, 'not sent');
+        return data;
     }
 }

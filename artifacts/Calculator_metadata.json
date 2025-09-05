@@ -115,7 +115,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"new.sol": "C"
+			"new.sol": "Calculator"
 		},
 		"evmVersion": "prague",
 		"libraries": {},
@@ -130,11 +130,11 @@
 	},
 	"sources": {
 		"new.sol": {
-			"keccak256": "0x022e928684f4504517b76075aa431b510e9404ba8a29bba397997dbc6d46690a",
+			"keccak256": "0x7d8d44998c19053ced668b55091d111253d07565d2dcaba600a9e09e5698a6ef",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://e4960ee45e00e2e7d93534422e2aac99eeb281dba80a124cda10246717c4e7be",
-				"dweb:/ipfs/QmeDydR3LUYsHS4bSgdEYWVg2Ljhhvg5EJnu5udciVBeGK"
+				"bzz-raw://e29411c392a81a96a6b77cd385b4dcc5b2f090e8a12880ab714db0228652f212",
+				"dweb:/ipfs/QmRAkBQzdaUVPkAqvZ9pJkgaVPWS4sCUCgX4nQyeAFhYfA"
 			]
 		}
 	},
