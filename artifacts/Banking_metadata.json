@@ -6,72 +6,80 @@
 	"output": {
 		"abi": [
 			{
+				"anonymous": false,
 				"inputs": [
 					{
+						"indexed": false,
 						"internalType": "address",
-						"name": "_addr",
-						"type": "address"
-					}
-				],
-				"name": "get",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "",
-						"type": "address"
-					}
-				],
-				"name": "myMap",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "_addr",
-						"type": "address"
-					}
-				],
-				"name": "remove",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "_addr",
+						"name": "userAddress",
 						"type": "address"
 					},
 					{
+						"indexed": false,
 						"internalType": "uint256",
-						"name": "_i",
+						"name": "amount",
 						"type": "uint256"
 					}
 				],
-				"name": "set",
+				"name": "depositFunds",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "userAddress",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "withdrawFunds",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "checkDeposit",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_amount",
+						"type": "uint256"
+					}
+				],
+				"name": "deposit",
 				"outputs": [],
-				"stateMutability": "nonpayable",
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_amount",
+						"type": "uint256"
+					}
+				],
+				"name": "withdraw",
+				"outputs": [],
+				"stateMutability": "payable",
 				"type": "function"
 			}
 		],
@@ -88,7 +96,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"mapping.sol": "Mapping"
+			"banking.sol": "Banking"
 		},
 		"evmVersion": "shanghai",
 		"libraries": {},
@@ -102,12 +110,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"mapping.sol": {
-			"keccak256": "0x2b14ec5318f50d06038faf5add37da9de7e1d6ae65b92c096b136bd486320c5f",
+		"banking.sol": {
+			"keccak256": "0x17aa352ad28b97fe519b2ff632a60bda73d462d15b3a14ddf12fde70a97792e5",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://236df74bb6017dd788d2c8a63104c2bd60fb56827dee28e015cccea5bbba0545",
-				"dweb:/ipfs/QmVFMcHZasVX5Eq55dDE6PQJqDffgaEkAYvQj2U396RAPt"
+				"bzz-raw://1828a11cca4d5a2df8797c219492117e5e90baa703acd1f1a0ac5861005127a5",
+				"dweb:/ipfs/QmQnacZZ2jfNr8mv6DKpQjWCXkvuF1Ei3J6JycMFAjtVvY"
 			]
 		}
 	},

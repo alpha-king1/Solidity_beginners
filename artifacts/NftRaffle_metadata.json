@@ -9,21 +9,77 @@
 				"inputs": [
 					{
 						"internalType": "address",
-						"name": "_addr",
+						"name": "_nftCollection",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_rewardToken",
 						"type": "address"
 					},
 					{
 						"internalType": "uint256",
-						"name": "_id",
+						"name": "_rewardAmount",
 						"type": "uint256"
 					}
 				],
-				"name": "get",
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "nftCollection",
 				"outputs": [
 					{
-						"internalType": "bool",
+						"internalType": "contract IERC721",
 						"name": "",
-						"type": "bool"
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "playRaffle",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "rewardAmount",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "rewardToken",
+				"outputs": [
+					{
+						"internalType": "contract IERC20",
+						"name": "",
+						"type": "address"
 					}
 				],
 				"stateMutability": "view",
@@ -32,41 +88,12 @@
 			{
 				"inputs": [
 					{
-						"internalType": "address",
-						"name": "",
-						"type": "address"
-					},
-					{
 						"internalType": "uint256",
-						"name": "",
+						"name": "_amount",
 						"type": "uint256"
 					}
 				],
-				"name": "nextedMap",
-				"outputs": [
-					{
-						"internalType": "bool",
-						"name": "",
-						"type": "bool"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "_addr",
-						"type": "address"
-					},
-					{
-						"internalType": "uint256",
-						"name": "_id",
-						"type": "uint256"
-					}
-				],
-				"name": "remove",
+				"name": "setReward",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -74,22 +101,12 @@
 			{
 				"inputs": [
 					{
-						"internalType": "address",
-						"name": "_addr",
-						"type": "address"
-					},
-					{
 						"internalType": "uint256",
-						"name": "_id",
+						"name": "_amount",
 						"type": "uint256"
-					},
-					{
-						"internalType": "bool",
-						"name": "_boolean",
-						"type": "bool"
 					}
 				],
-				"name": "set",
+				"name": "withdrawTokens",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -108,7 +125,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"mapping.sol": "NextedMapping"
+			"TreasureChest.sol": "NftRaffle"
 		},
 		"evmVersion": "shanghai",
 		"libraries": {},
@@ -122,12 +139,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"mapping.sol": {
-			"keccak256": "0x2b14ec5318f50d06038faf5add37da9de7e1d6ae65b92c096b136bd486320c5f",
+		"TreasureChest.sol": {
+			"keccak256": "0xd0e7fb4585e707bf046f00450622addc6bb183ea14017eeca56913b233860d0e",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://236df74bb6017dd788d2c8a63104c2bd60fb56827dee28e015cccea5bbba0545",
-				"dweb:/ipfs/QmVFMcHZasVX5Eq55dDE6PQJqDffgaEkAYvQj2U396RAPt"
+				"bzz-raw://b925445b844e4939785c7f8c92078fc777aa5a1acaf1a43380e086260533b25d",
+				"dweb:/ipfs/QmbQf8KAMgnhduBBDeaUkDPjqPiYQ1WBvo7UTN8JmmaRRu"
 			]
 		}
 	},

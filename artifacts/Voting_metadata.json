@@ -188,7 +188,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"personal1.sol": "Voting"
+			"VotingSystem.sol": "Voting"
 		},
 		"evmVersion": "prague",
 		"libraries": {},
@@ -202,7 +202,7 @@
 		"remappings": []
 	},
 	"sources": {
-		"personal1.sol": {
+		"VotingSystem.sol": {
 			"keccak256": "0xc2d34d06133e17a623c3a5f3486772c229905ff1b1c5716c97bf089a48f35a84",
 			"license": "MIT",
 			"urls": [

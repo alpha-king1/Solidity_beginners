@@ -1,6 +1,6 @@
 {
 	"compiler": {
-		"version": "0.8.30+commit.73712a01"
+		"version": "0.8.24+commit.e11b9ed9"
 	},
 	"language": "Solidity",
 	"output": {
@@ -54,7 +54,7 @@
 		"compilationTarget": {
 			"nft.sol": "ERC165"
 		},
-		"evmVersion": "prague",
+		"evmVersion": "shanghai",
 		"libraries": {},
 		"metadata": {
 			"bytecodeHash": "ipfs"
@@ -67,11 +67,11 @@
 	},
 	"sources": {
 		"nft.sol": {
-			"keccak256": "0xf50a7ac6aebafa859138a3daf2b0bc3c5ad58de6e568435fad9c977bff310128",
+			"keccak256": "0x20cd147787a1e636c9938dd4790afb578adcf3819d018fdb286b9d8dfd15717a",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://b27c4d7feba03373ef78a152404ab57ca79b18727cea634c9e69b8f230b5a956",
-				"dweb:/ipfs/QmT9s8uAVkWK346mDsFqrp2Aojjr2dZqcJDo8rDhX2tZtu"
+				"bzz-raw://0862a14f16de48e61b7f4b472671f6a070d08db2792c2e146b884d3d05422275",
+				"dweb:/ipfs/Qmecv4cujQyUpyrwPMuVFhDCjPJvZ1TYTdFtkrBYrYnSbU"
 			]
 		}
 	},

@@ -1,6 +1,6 @@
 {
 	"compiler": {
-		"version": "0.8.30+commit.73712a01"
+		"version": "0.8.24+commit.e11b9ed9"
 	},
 	"language": "Solidity",
 	"output": {
@@ -16,23 +16,29 @@
 					{
 						"indexed": false,
 						"internalType": "uint256",
-						"name": "productId",
+						"name": "id",
 						"type": "uint256"
 					},
 					{
 						"indexed": false,
 						"internalType": "string",
-						"name": "productName",
+						"name": "name",
 						"type": "string"
 					},
 					{
 						"indexed": false,
 						"internalType": "uint256",
-						"name": "productPrice",
+						"name": "price",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "stock",
 						"type": "uint256"
 					}
 				],
-				"name": "productDetail",
+				"name": "ProductListed",
 				"type": "event"
 			},
 			{
@@ -41,24 +47,62 @@
 					{
 						"indexed": false,
 						"internalType": "uint256",
-						"name": "totalPrice",
+						"name": "productId",
 						"type": "uint256"
-					},
-					{
-						"indexed": false,
-						"internalType": "string",
-						"name": "productName",
-						"type": "string"
 					},
 					{
 						"indexed": false,
 						"internalType": "uint256",
-						"name": "amountPurchased",
+						"name": "orderId",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "quantity",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "enum MarketPlace.Status",
+						"name": "status",
+						"type": "uint8"
+					}
+				],
+				"name": "ProductPurchased",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "sellerAddress",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "amountWithdrawn",
 						"type": "uint256"
 					}
 				],
-				"name": "puchasedDetails",
+				"name": "WithdrawFunds",
 				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_orderId",
+						"type": "uint256"
+					}
+				],
+				"name": "acceptOrder",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
 			},
 			{
 				"inputs": [
@@ -69,7 +113,7 @@
 					},
 					{
 						"internalType": "uint256",
-						"name": "_purchaseQuantity",
+						"name": "_quantity",
 						"type": "uint256"
 					}
 				],
@@ -81,53 +125,173 @@
 			{
 				"inputs": [
 					{
-						"internalType": "string",
-						"name": "_productname",
-						"type": "string"
-					},
-					{
 						"internalType": "uint256",
-						"name": "_productQuantity",
+						"name": "_orderId",
 						"type": "uint256"
-					},
-					{
-						"internalType": "uint256",
-						"name": "_productPrice",
-						"type": "uint256"
-					},
-					{
-						"internalType": "bool",
-						"name": "_buyOnce",
-						"type": "bool"
 					}
 				],
-				"name": "createProduct",
+				"name": "cancelOrder",
 				"outputs": [],
-				"stateMutability": "payable",
+				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
 				"inputs": [
 					{
 						"internalType": "address",
-						"name": "",
+						"name": "_sellerAddress",
 						"type": "address"
-					},
+					}
+				],
+				"name": "checkBalance",
+				"outputs": [
 					{
 						"internalType": "uint256",
 						"name": "",
 						"type": "uint256"
 					}
 				],
-				"name": "inabilityToBuy",
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_productName",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_quantity",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_price",
+						"type": "uint256"
+					}
+				],
+				"name": "listProduct",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "ownerBalance",
 				"outputs": [
 					{
-						"internalType": "bool",
+						"internalType": "uint256",
 						"name": "",
-						"type": "bool"
+						"type": "uint256"
 					}
 				],
 				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_amount",
+						"type": "uint256"
+					}
+				],
+				"name": "ownerWithdraw",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_orderId",
+						"type": "uint256"
+					}
+				],
+				"name": "rejectOrder",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_orderId",
+						"type": "uint256"
+					}
+				],
+				"name": "settleOrder",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_orderId",
+						"type": "uint256"
+					}
+				],
+				"name": "shipProduct",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_productId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "_productName",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_quantity",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_price",
+						"type": "uint256"
+					}
+				],
+				"name": "updateProduct",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_sellerAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_amount",
+						"type": "uint256"
+					}
+				],
+				"name": "withdraw",
+				"outputs": [],
+				"stateMutability": "nonpayable",
 				"type": "function"
 			}
 		],
@@ -144,9 +308,9 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"DecentralizedMarketPlace.sol": "MarketPlace"
+			"AdvancedMarketPlace.sol": "MarketPlace"
 		},
-		"evmVersion": "prague",
+		"evmVersion": "shanghai",
 		"libraries": {},
 		"metadata": {
 			"bytecodeHash": "ipfs"
@@ -158,12 +322,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"DecentralizedMarketPlace.sol": {
-			"keccak256": "0x8857adb378e5761d0d7c10ebc5fd5c7b545d7b448a03cbec45de83c60488b6f9",
+		"AdvancedMarketPlace.sol": {
+			"keccak256": "0x22528024f8a022497190cdcfaaa9d65adda433b304aca0ce0a12db779fd954a4",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://9d68b4ab31f355d24dcef6dc79026e50b40b681d75ae626237dc5ffa6f9ac02e",
-				"dweb:/ipfs/QmRHPm6qdwosTBJmph88rRSDMii5PPU7BPaLU9CqVXRg7C"
+				"bzz-raw://a38667fa52c052cc476a6090f1803d3bd0cecd8d431e9b1526ab3abe68e54db0",
+				"dweb:/ipfs/Qmc2diViDHY7jXRqzQNPoy8mQYi2EskxYgHpHiuc3PT7HS"
 			]
 		}
 	},

@@ -6,25 +6,28 @@
 	"output": {
 		"abi": [
 			{
-				"stateMutability": "payable",
-				"type": "fallback"
-			},
-			{
-				"inputs": [],
-				"name": "getbalance",
-				"outputs": [
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "recipient",
+						"type": "address"
+					},
 					{
 						"internalType": "uint256",
-						"name": "",
+						"name": "amount",
 						"type": "uint256"
 					}
 				],
-				"stateMutability": "view",
+				"name": "transfer",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
 				"type": "function"
-			},
-			{
-				"stateMutability": "payable",
-				"type": "receive"
 			}
 		],
 		"devdoc": {
@@ -40,7 +43,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"payable.sol": "ReceiveFunds"
+			"TreasureChest.sol": "IERC20"
 		},
 		"evmVersion": "shanghai",
 		"libraries": {},
@@ -54,12 +57,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"payable.sol": {
-			"keccak256": "0x3b200faf3f188e8edc7877b2098c23aac0f375c0b8045a9a7e50bec200b0b905",
+		"TreasureChest.sol": {
+			"keccak256": "0xb279a17c5e5099d4559d80d5e20518e29dfde95cd682137b85890be5c47846c4",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://2a1c6c9eaf257cb7f223cbb63e51fb68933574eff9d7832b65e261b5db7eedb2",
-				"dweb:/ipfs/QmSxkcw6m4C9fHF1TBcJoUZKG5b1TzoAPvdE4TA6t2Ezx5"
+				"bzz-raw://c08a25d7434eceb9092745c007838d2c6a249490a063ac256cbb8d36f0757096",
+				"dweb:/ipfs/QmQteBQrFg5S6uJB2sQaZLjiDxEB43vC7zXw8ySLL2j2AG"
 			]
 		}
 	},
